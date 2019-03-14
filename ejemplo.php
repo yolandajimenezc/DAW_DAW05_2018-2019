@@ -1,25 +1,12 @@
 <?php
+
+
 /**
 * Ejemplo.php
 *
-* En esta clase se define un método “sumarDosNumeros” y una clase llamada Ejemplo.
+* En esta clase se define un método “MultiplicartresNumeros” y una clase llamada Ejemplo.
 *
 */
-/**
-* Sumar dos números.
-*
-* Función que permite calcular la multiplicación de tres números.
-*
-* @param integer|float|double $v1 Valor1 a multiplicar.
-* @param integer|float|double $v2 Valor2 a multiplicar.
-* @param integer|float|double $v3 Valor3 a multiplicar.
-* @return integet|float|double Suma de los dos
-valores. */
-
-function multiplicarTresNumeros ($v1, $v2, $v3)
-{
-	return $v1*$v2*$v3;
-}
 
 /**
 * Clase de ejemplo.
@@ -35,6 +22,23 @@ class Ejemplo {
 */ var $b;
 /** @var integer|float|double $c Valor C de ejemplo.
 */ var $c;
+
+/**
+* Multiplicar tres números.
+*
+* Función que permite calcular la multiplicación de tres números.
+*
+* @param $aaa
+* @param $bbb
+* @param $ccc
+*
+* @return mixed Multiplicar de los dos valores. 
+*/
+public static function multiplicarTresNumeros ($aaa, $bbb, $ccc)
+{
+	return $aaa*$bbb*$ccc;
+}
+
 /**
 * Multiplicar.
 *
@@ -45,7 +49,7 @@ valores. */
 
 	function multiplicar ()
 	{
-		return multiplicarTresNumeros($this->a, $this->b, $this->c);
+		return Ejemplo::multiplicarTresNumeros($this->a, $this->b, $this->c);
 	}
 }
 
